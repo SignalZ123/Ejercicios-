@@ -15,6 +15,7 @@
     margin: 0;
     
 }
+/* 100% == 16px and 150 = 24px*/
 body{
     /* height: 100vh; */
     box-sizing: border-box;
@@ -22,6 +23,7 @@ body{
     color:  var(--color-secundario);
 }
 .header{
+    /*top/right/botom/left*/
     padding: 2% 0% 0% 15%;
     
 
@@ -32,7 +34,7 @@ body{
 }
 .header_menu_link{
     font-family: var(--color-primario);
-    font-size: 24px;
+    font-size: 1.4rem;
     font-weight: 600;
     color: var(--color-terceario);
     text-decoration: none;
@@ -43,10 +45,12 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 82px; /*para el espacio entre la foto y seccion*/
 }
 
 .presentacion_contenido{
-    width: 615px;
+    /* width: 615px; */
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -61,7 +65,7 @@ body{
 }
 
 .presentacion_contenido_texto{
-    font-size: 24px;
+    font-size: 1.5rem;/*Crt +f cambiamos a 24 px a 1.5Rem*/
     font-family: "Montserrat", sans-serif;
 }
 
@@ -75,14 +79,15 @@ body{
 .presentacion_enlaces_subtitulo{
     font-family: var(--fuente-krona);
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 .presentacion_enlaces_link{
     /* background-color: #22D4FD; */
-    width: 378px;
+    /* width: 378px; */
+    width: 50%;
     text-align: center; 
     border-radius: 8px;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     padding: 21.5px 0;
     text-decoration: none;
@@ -98,13 +103,48 @@ body{
 .presentacion_enlaces_link:hover{
     background-color: #272727;
 }
+
+/* 100% == 16px and 150 = 24px*/
+.presentacion_imagen{
+    width: 40%;
+    border-radius: 30.5rem;
+    border: 2px solid #F6F6F6;
+    
+}
 /*--------------FOOTER-----------------*/
+/*1rem equivale a 16px asi que 24px/16px =1.5rem*/
 .footer{
     color: var(--color-primario);
     background-color: var(--color-terceario);
-    padding: 24px;
+    padding: 1.5rem;
     text-align: center;
     font-family: var(--fuente-montserrat);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
+}
+
+/*MEDIA QUERYS */
+@media(max-width: 1200px){
+
+    .header{
+        padding: 10%;
+    }
+    .header_menu{
+        justify-content:center ;
+    }
+    .presentacion{
+        /*el flex-direction: por defecto esta en 'row'*/
+        /* ahora lo cambiamos */
+        flex-direction: column-reverse;
+        padding: 5%; /*para las laterales al reducir*/
+    }
+    .presentacion_contenidoñ{
+        width: auto; /*se adapta tamaño al mometo de reducir*/
+    }
+    .presentacion_enlaces_link{
+        width: 70%;
+        /* padding: auto; */
+        /* border: auto; */
+    }
+
 }
