@@ -146,5 +146,8 @@ body{
         /* padding: auto; */
         /* border: auto; */
     }
+    .presentacion_imagen{
+        margin: auto;
+    }
 
 }
